@@ -1,0 +1,14 @@
+{
+  "name": "LoopDeFi",
+  "description": "LoopDeFi is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://2a68041c-3bf2-4b04-b3d2-c352b9e9f32c.vercel.app",
+  "properties": {
+    "app": {
+      "name": "LoopDeFi",
+      "description": "LoopDeFi is a Base Mini App built with Zara.",
+      "url": "https://2a68041c-3bf2-4b04-b3d2-c352b9e9f32c.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
