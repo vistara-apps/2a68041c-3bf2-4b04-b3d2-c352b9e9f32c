@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Professional Finance Theme - Dark Navy + Gold */
+  --color-bg: hsl(220, 30%, 8%);
+  --color-fg: hsl(0, 0%, 98%);
+  --color-accent: hsl(45, 100%, 51%); /* Gold */
+  --color-border: hsl(220, 20%, 18%);
+  --color-surface: hsl(220, 25%, 12%);
+  --color-surface-glass: hsla(220, 25%, 15%, 0.7);
+  --color-primary: hsl(45, 100%, 51%); /* Gold */
+  --color-primary-hover: hsl(45, 100%, 45%);
+  --color-success: hsl(142, 76%, 36%);
+  --color-warning: hsl(38, 92%, 50%);
+  --color-danger: hsl(0, 84%, 60%);
+  --color-text-muted: hsl(0, 0%, 65%);
+  --color-chart1: hsl(142, 76%, 36%);
+  --color-chart2: hsl(45, 100%, 51%);
+  --color-chart3: hsl(197, 92%, 61%);
+  --color-glow: hsla(45, 100%, 51%, 0.3);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg text-fg antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-glass backdrop-blur-xl border border-border rounded-lg;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-accent text-bg px-6 py-3 rounded-lg font-medium hover:from-primary-hover hover:to-primary transition-all duration-200 shadow-lg hover:shadow-glow;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply border border-border text-fg px-6 py-3 rounded-lg font-medium hover:bg-surface transition-all duration-200;
+  }
+
+  .metric-card {
+    @apply glass-card p-4 hover:bg-opacity-15 transition-all duration-200;
+  }
+
+  .strategy-card {
+    @apply glass-card p-6 hover:shadow-card-hover transition-all duration-200 cursor-pointer;
+  }
+
+  .strategy-card-active {
+    @apply strategy-card border-success shadow-glow;
+  }
+
+  .strategy-card-warning {
+    @apply strategy-card border-warning;
+  }
+
+  .health-gauge-safe {
+    @apply text-success;
+  }
+
+  .health-gauge-warning {
+    @apply text-warning;
+  }
+
+  .health-gauge-danger {
+    @apply text-danger;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
